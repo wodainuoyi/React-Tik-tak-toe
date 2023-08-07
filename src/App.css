@@ -1,38 +1,105 @@
-.App {
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+.tic-tac-toe{
+  width: 300px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+.square{
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 75px;
+  margin-right: -1px;
+  margin-top:-1px;
+  padding: 0;
   text-align: center;
+  width: 75px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.square:hover{
+  background: #e4e4e4;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.square:active{
+  background: #b5b5b5;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.board-row{
+  /* 居中显示 */
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.board-row:after{
+  clear: both;
+  content: "";
+  display: table;
+}
+.status{
+  /* 根据父级div垂直居中 */
+
+  margin: 250px 0;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+*{
+  box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.functionButton{
+  width: 100px;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 34px;
+  text-align: center;
+  cursor: pointer;
+}
+.functionButton{
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 5%;
+  margin-left: 15%;
+}
+
+.game-info{
+  position: absolute;
+  left: 67%;
+  top: 34%;
+  height: 300px;
+}
+.game-info li{
+  /* 间距 */
+  padding-bottom: 2px;
+}
+.game-board{
+  width: 300px;
+  left: 45%;
+  position: absolute;
+}
+.winningClass{
+  background: yellow;
+}
+.winningClass:active{
+  background: yellow;
+}
+.winningClass:hover{
+  background: yellow;
 }
